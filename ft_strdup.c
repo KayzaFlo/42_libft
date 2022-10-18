@@ -6,24 +6,14 @@
 /*   By: fgeslin <fgeslin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 12:48:31 by fgeslin           #+#    #+#             */
-/*   Updated: 2022/10/17 15:37:41 by fgeslin          ###   ########.fr       */
+/*   Updated: 2022/10/18 10:29:55 by fgeslin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 1;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	char	*dest;
 	int		i;

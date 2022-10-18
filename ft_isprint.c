@@ -6,13 +6,13 @@
 /*   By: fgeslin <fgeslin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 15:27:20 by fgeslin           #+#    #+#             */
-/*   Updated: 2022/10/17 15:37:42 by fgeslin          ###   ########.fr       */
+/*   Updated: 2022/10/18 10:28:10 by fgeslin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_isalpha(char c)
+int	ft_isprint(char c)
 {
 	if (c >= ' ' && c <= '~')
 		return (1);

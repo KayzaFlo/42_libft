@@ -6,36 +6,28 @@
 /*   By: fgeslin <fgeslin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 16:51:41 by fgeslin           #+#    #+#             */
-/*   Updated: 2022/10/17 15:37:38 by fgeslin          ###   ########.fr       */
+/*   Updated: 2022/10/18 10:33:02 by fgeslin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	i;
+#include "libft.h"
 
-	i = 0;
-	while (*(str + i) != '\0')
-		i++;
-	return (i);
-}
-
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	unsigned int	i;
 	unsigned int	shift;
 
-	shift = ft_strlen(dest);
-	if (shift >= size)
+	shift = ft_strlen(dst);
+	if (shift >= dstsize)
 	{
-		return (size + ft_strlen(src));
+		return (dstsize + ft_strlen(src));
 	}
 	i = 0;
-	while (src[i] != '\0' && shift + i < size - 1)
+	while (src[i] != '\0' && shift + i < dstsize - 1)
 	{
-		dest[shift + i] = src[i];
+		dst[shift + i] = src[i];
 		i++;
 	}
-	dest[shift + i] = '\0';
+	dst[shift + i] = '\0';
 	return (shift + ft_strlen(src));
 }

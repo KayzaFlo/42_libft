@@ -6,11 +6,11 @@
 /*   By: fgeslin <fgeslin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:55:01 by fgeslin           #+#    #+#             */
-/*   Updated: 2022/10/18 12:21:02 by fgeslin          ###   ########.fr       */
+/*   Updated: 2022/10/18 12:52:29 by fgeslin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-const char	*ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
@@ -18,7 +18,7 @@ const char	*ft_strchr(const char *s, int c)
 	while (s[i])
 	{
 		if (s[i] == c)
-			return (s + i);
+			return ((char *)(s + i));
 		i++;
 	}
 	return (0);

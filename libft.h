@@ -6,14 +6,15 @@
 /*   By: fgeslin <fgeslin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 09:33:33 by fgeslin           #+#    #+#             */
-/*   Updated: 2022/10/18 10:36:21 by fgeslin          ###   ########.fr       */
+/*   Updated: 2022/10/18 11:00:08 by fgeslin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-typedef unsigned long	size_t;
+//typedef unsigned long	size_t;
+# include <stddef.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

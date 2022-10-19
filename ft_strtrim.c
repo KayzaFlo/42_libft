@@ -6,14 +6,14 @@
 /*   By: fgeslin <fgeslin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:37:10 by fgeslin           #+#    #+#             */
-/*   Updated: 2022/10/18 11:51:33 by fgeslin          ###   ########.fr       */
+/*   Updated: 2022/10/19 10:58:58 by fgeslin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-int	setcmp(char c, const char *set)
+static int	setcmp(char c, const char *set)
 {
 	int	i;
 

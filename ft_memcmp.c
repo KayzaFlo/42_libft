@@ -6,7 +6,7 @@
 /*   By: fgeslin <fgeslin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 16:57:25 by fgeslin           #+#    #+#             */
-/*   Updated: 2022/10/18 17:07:45 by fgeslin          ###   ########.fr       */
+/*   Updated: 2022/10/19 11:51:17 by fgeslin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 			return (dst_byte[i] - src_byte[i]);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

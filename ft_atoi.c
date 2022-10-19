@@ -6,11 +6,9 @@
 /*   By: fgeslin <fgeslin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 13:18:40 by fgeslin           #+#    #+#             */
-/*   Updated: 2022/10/19 11:50:37 by fgeslin          ###   ########.fr       */
+/*   Updated: 2022/10/19 12:14:15 by fgeslin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 static int	ft_isspace(char c)
 {
@@ -18,7 +16,7 @@ static int	ft_isspace(char c)
 		return (1);
 	if (c == '\r' || c == '\t' || c == '\v')
 		return (1);
-	return (NULL);
+	return (0);
 }
 
 int	ft_atoi(const char *str)

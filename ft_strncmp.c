@@ -6,7 +6,7 @@
 /*   By: fgeslin <fgeslin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 14:41:06 by fgeslin           #+#    #+#             */
-/*   Updated: 2022/10/19 11:52:21 by fgeslin          ###   ########.fr       */
+/*   Updated: 2022/10/19 12:14:41 by fgeslin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	if (i != n)
 		return (s1[i] - s2[i]);
 	else
-		return (NULL);
+		return (0);
 }

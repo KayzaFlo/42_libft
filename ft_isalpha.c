@@ -6,11 +6,9 @@
 /*   By: fgeslin <fgeslin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 15:17:32 by fgeslin           #+#    #+#             */
-/*   Updated: 2022/10/17 15:37:45 by fgeslin          ###   ########.fr       */
+/*   Updated: 2022/10/19 14:25:15 by fgeslin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_isalpha(char c)
 {

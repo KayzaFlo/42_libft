@@ -6,12 +6,12 @@
 /*   By: fgeslin <fgeslin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:06:17 by fgeslin           #+#    #+#             */
-/*   Updated: 2022/10/19 11:52:03 by fgeslin          ###   ########.fr       */
+/*   Updated: 2022/10/19 14:26:43 by fgeslin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
+#include "libft.h"
 
 static int	get_wc(const char *str, char sep)
 {

@@ -6,11 +6,9 @@
 /*   By: fgeslin <fgeslin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 15:27:20 by fgeslin           #+#    #+#             */
-/*   Updated: 2022/10/18 10:27:57 by fgeslin          ###   ########.fr       */
+/*   Updated: 2022/10/19 14:25:14 by fgeslin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_isascii(char c)
 {

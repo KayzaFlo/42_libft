@@ -6,11 +6,9 @@
 /*   By: fgeslin <fgeslin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 15:27:20 by fgeslin           #+#    #+#             */
-/*   Updated: 2022/10/19 11:50:55 by fgeslin          ###   ########.fr       */
+/*   Updated: 2022/10/19 14:25:16 by fgeslin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_isalnum(char c)
 {

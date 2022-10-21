@@ -6,7 +6,7 @@
 /*   By: fgeslin <fgeslin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 12:54:50 by fgeslin           #+#    #+#             */
-/*   Updated: 2022/10/19 11:51:10 by fgeslin          ###   ########.fr       */
+/*   Updated: 2022/10/21 14:20:11 by fgeslin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	get_len(int n)
 {
 	int	mag;
 
-	mag = 0;
+	mag = 1;
 	while (n > 9 || n < -9)
 	{
 		mag++;
@@ -26,6 +26,14 @@ static int	get_len(int n)
 	if (n < 0)
 		return (mag + 2);
 	return (mag + 1);
+}
+
+static char	setchar(int n)
+{
+	if (n < 0)
+		return (-(n % 10) + '0');
+	else
+		return (n % 10 + '0');
 }
 
 char	*ft_itoa(int n)
@@ -40,19 +48,14 @@ char	*ft_itoa(int n)
 		return (NULL);
 	if (n < 0)
 		str[0] = '-';
-	i = len - 1;
+	i = len - 2;
 	while (n > 9 || n < -9)
 	{
-		if (n < 0)
-			str[i] = -(n % 10) + '0';
-		else
-			str[i] = n % 10 + '0';
+		str[i] = setchar(n);
 		n /= 10;
 		i--;
 	}
-	if (n < 0)
-		str[i] = -(n % 10) + '0';
-	else
-		str[i] = n % 10 + '0';
+	str[i] = setchar(n);
+	str[len - 1] = 0;
 	return (str);
 }

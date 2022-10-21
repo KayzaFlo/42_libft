@@ -6,11 +6,11 @@
 /*   By: fgeslin <fgeslin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 14:34:45 by fgeslin           #+#    #+#             */
-/*   Updated: 2022/10/17 15:47:05 by fgeslin          ###   ########.fr       */
+/*   Updated: 2022/10/21 12:29:25 by fgeslin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_toupper(char c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (c - 32);

@@ -6,38 +6,45 @@
 #    By: fgeslin <fgeslin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 13:25:46 by fgeslin           #+#    #+#              #
-#    Updated: 2022/10/19 16:13:31 by fgeslin          ###   ########.fr        #
+#    Updated: 2022/10/21 12:48:28 by fgeslin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := libft.a
+NAME		:= libft.a
 
-SRCDIR := .
+SRCDIR		:= .
 
-SRC = $(filter-out $(wildcard $(SRCDIR)/*_bonus.c), $(wildcard $(SRCDIR)/*.c))
-SRC_BONUS = $(wildcard $(SRCDIR)/*.c)
+SRC			= $(filter-out $(wildcard $(SRCDIR)/*_bonus.c), $(wildcard $(SRCDIR)/*.c))
+SRC_BONUS	= $(filter $(wildcard $(SRCDIR)/*_bonus.c), $(wildcard $(SRCDIR)/*.c))
 
-OBJ = $(SRC:.c=.o)
-OBJ_BONUS = $(SRC_BONUS:.c=.o)
+OBJ			= $(SRC:.c=.o)
+OBJ_BONUS	= $(SRC_BONUS:.c=.o)
 
-INCDIR := .
+INCDIR		:= .
 
-INC = $(wildcard $(INCDIR)/*.h)
+INC			= $(wildcard $(INCDIR)/*.h)
 
-CFLAGS += -Wall -Wextra -Werror -I$(INC)
+CC			:= gcc
+
+RM			:= rm -f
+
+CFLAGS		= -Wall -Wextra -Werror
+
+.c.o:
+	${CC} ${CFLAGS} -I $(INC) -c $< -o ${<:.c=.o}
 
 all: $(NAME)
 
-bonus: $(OBJ_BONUS)
-	ar rc $(NAME) $(OBJ_BONUS)
-
 $(NAME): $(OBJ)
-	ar rc $(NAME) $(OBJ)
+	ar rcs $(NAME) $(OBJ)
+
+bonus: $(OBJ) $(OBJ_BONUS)
+	ar rcs $(NAME) $(OBJ) $(OBJ_BONUS)
 
 clean:
-	/bin/rm -f $(OBJ_BONUS)
+	${RM} $(OBJ) $(OBJ_BONUS)
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	${RM} $(NAME)
 
 re: fclean all

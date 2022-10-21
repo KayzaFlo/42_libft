@@ -6,11 +6,11 @@
 /*   By: fgeslin <fgeslin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 15:27:20 by fgeslin           #+#    #+#             */
-/*   Updated: 2022/10/19 14:25:16 by fgeslin          ###   ########.fr       */
+/*   Updated: 2022/10/21 12:25:51 by fgeslin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(char c)
+int	ft_isalnum(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (1);

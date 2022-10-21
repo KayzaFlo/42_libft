@@ -6,11 +6,11 @@
 /*   By: fgeslin <fgeslin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 15:17:32 by fgeslin           #+#    #+#             */
-/*   Updated: 2022/10/19 14:25:15 by fgeslin          ###   ########.fr       */
+/*   Updated: 2022/10/21 12:25:53 by fgeslin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (1);

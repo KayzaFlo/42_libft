@@ -6,7 +6,7 @@
 /*   By: fgeslin <fgeslin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:37:10 by fgeslin           #+#    #+#             */
-/*   Updated: 2022/10/19 10:58:58 by fgeslin          ###   ########.fr       */
+/*   Updated: 2022/10/21 14:32:53 by fgeslin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	start = 0;
 	end = ft_strlen(s1) - 1;
-	while (setcmp(s1[start], set) == 1)
+	while (setcmp(s1[start], set) == 1 && s1[start])
 		start++;
-	while (setcmp(s1[end], set) == 1)
+	while (setcmp(s1[end], set) == 1 && end > 0)
 		end--;
+	if (end == 0)
+		start = 1;
 	str = malloc((end - start + 2) * sizeof(char));
 	if (str == NULL)
 		return (NULL);

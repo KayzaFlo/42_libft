@@ -6,7 +6,7 @@
 /*   By: fgeslin <fgeslin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 15:49:55 by fgeslin           #+#    #+#             */
-/*   Updated: 2022/10/21 12:53:34 by fgeslin          ###   ########.fr       */
+/*   Updated: 2022/10/21 14:21:43 by fgeslin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char	*dst_byte;
 	size_t			i;
 
+	if (!dst && !src)
+		return (NULL);
 	dst_byte = dst;
 	i = -1;
 	if (dst > src)

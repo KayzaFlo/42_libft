@@ -6,7 +6,7 @@
 /*   By: fgeslin <fgeslin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 13:24:59 by fgeslin           #+#    #+#             */
-/*   Updated: 2022/10/19 15:37:58 by fgeslin          ###   ########.fr       */
+/*   Updated: 2022/10/21 17:09:03 by fgeslin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*nextdel;
 
+	if (!lst || !del)
+		return ;
 	nextdel = 0;
 	while (*lst)
 	{

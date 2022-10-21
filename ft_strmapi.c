@@ -6,7 +6,7 @@
 /*   By: fgeslin <fgeslin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 10:05:30 by fgeslin           #+#    #+#             */
-/*   Updated: 2022/10/21 16:28:30 by fgeslin          ###   ########.fr       */
+/*   Updated: 2022/10/21 17:10:32 by fgeslin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*str;
 	unsigned int	i;
 
+	if (!s || !f)
+		return (NULL);
 	str = malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (str == 0)
 		return (0);

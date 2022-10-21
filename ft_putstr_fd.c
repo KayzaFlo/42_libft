@@ -6,7 +6,7 @@
 /*   By: fgeslin <fgeslin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 12:43:24 by fgeslin           #+#    #+#             */
-/*   Updated: 2022/10/17 15:53:38 by fgeslin          ###   ########.fr       */
+/*   Updated: 2022/10/21 17:10:05 by fgeslin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putstr_fd(char *str, int fd)
 {
+	if (!str)
+		return ;
 	while (*str != '\0')
 	{
 		write(fd, &*str, 1);

@@ -6,7 +6,7 @@
 #    By: fgeslin <fgeslin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 13:25:46 by fgeslin           #+#    #+#              #
-#    Updated: 2022/10/21 12:48:28 by fgeslin          ###   ########.fr        #
+#    Updated: 2022/10/27 12:57:25 by fgeslin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,3 +48,6 @@ fclean: clean
 	${RM} $(NAME)
 
 re: fclean all
+
+.PHONY:		all clean fclean re
+
